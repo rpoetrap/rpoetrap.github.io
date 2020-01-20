@@ -1,0 +1,106 @@
+i.material-icons {
+    padding-right: 12px;
+}
+
+.row .article:not(:last-child) {
+    margin-bottom: 8px;
+    padding-bottom: 1.67em;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.desc {
+    position: relative;
+}
+
+.desc p{
+    text-overflow: ellipsis;
+    text-align:justify;
+    height: 4.7em;
+    overflow: hidden;
+    display: inline-block;
+    margin: 0;
+}
+
+.desc p::before {
+    content: "...";
+    position: absolute;
+    right: 0;
+    bottom: 0.5em;
+    z-index: 1;
+}
+
+.desc p::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1.05em;
+    height: 2em;
+    margin-top: 0.2em;
+    background: white;
+  }
+
+  .loader {
+    position: absolute;
+    top :0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+td.clickable {
+    cursor: pointer;
+}
+
+table.highlight > tbody > tr:hover {
+    background: #BBDEFB;
+}
+
+table td.clickable:hover {
+    font-weight: 700;
+}
+
+.card {
+    background: #E3F2FD;
+}
+
+.card:hover {
+    background: #BBDEFB;
+}
+
+ul > li {
+    display: inline;
+    margin: 0 16px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.fav > i.material-icons {
+    padding: 0;
+    font-size: 2rem;
+    line-height: inherit;
+}
+
+.fav {
+    line-height: 36px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    vertical-align: inherit;
+    height: 36px;
+}
+
+.fav > i.active::before {
+    content: "star";
+}
+
+.fav > i::before {
+    content: "star_border";
+}

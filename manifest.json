@@ -1,0 +1,27 @@
+{
+    "name": "Basic Laboratory",
+    "short_name": "Basic Lab",
+    "description": "Basic Laboratory Web App",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#bbdefb",
+    "theme_color": "#bbdefb",
+    "icons": [
+        {
+            "src": "/static/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/icon-180.png",
+            "sizes": "180x180",
+            "type": "image/png"
+        }
+    ],
+    "gcm_sender_id": "951076692640"
+}
