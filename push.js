@@ -20,11 +20,11 @@ var options = {
 };
 
 var pushSubscription = {
-   "endpoint": "https://fcm.googleapis.com/fcm/send/f_NsZV1gTd0:APA91bF1_WkCOBw608c8t17CkdMJtsE7I2a5p-ogytEJglXXO18Umrr0yqrsPIcvX0bKvPAPNOYHEC5fbhqLqsEMk24YSzrXPVF3fBiBNrYSVQ3iUT6kUBiINDZp4GW-ThbglIZzgyU1",
-   "keys": {
-      "p256dh": "BCqxwiV5zE-ATTYviJjtC7dhS4Eqhh_GcU7lvOZBXMcSoAdL7p6m9IbTrDqjqIZ5zRJtDPLJQZDUS8QtoUASFrM",
-      "auth": "gkWeEofY5Dt2jl6NmNsbNg"
-   }
+  "endpoint": "https://fcm.googleapis.com/fcm/send/ePPOQgS_FYo:APA91bG94tfZK2ROvAsUNlNFrooilmsGPM3wDvUSEsKIPrAy5Ej427a291v5huGXN3qCfGD279-khxf6zfl_2laiDsAyVwZfcop1fqIaqZst9NL9gS1LleNVlE7Eg1x927qqnRwY1PtM",
+  "keys": {
+    "p256dh": "BNZtypQeNyOZISlc6r9GhS8rxd4857URpl84RJ_37nt7-u2jj2pdZWAfscgtK8iYKnO3epRykmvsXP9lYiuhKg4",
+    "auth": "P1FSBuqOSyyNZxZ6gxk7vA"
+  }
 };
 
 webPush.sendNotification(pushSubscription, payload, options);
