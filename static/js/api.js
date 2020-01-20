@@ -1,5 +1,5 @@
 var football = {
-  base_url: "http://api.football-data.org/v2/",
+  base_url: "https://api.football-data.org/v2/",
   keys: "c8d6b1ea2fe5430587062bdb8d4aed32",
   getAllCompetitions: function(callback) {
     let endpoint = "competitions/?plan=TIER_ONE";
