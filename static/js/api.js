@@ -97,9 +97,22 @@ var football = {
 
 function status(response) {
   if (response.status !== 200) {
-    if (response.status === 404) alert("Not Found");
-    else alert("Error");
-    history.back();
+    if (response.status === 404) 
+      M.toast({
+        html: 'Not Found!',
+        displayLength: 2000,
+        completeCallback: function(){
+          history.back();
+        }
+      });
+    else
+      M.toast({
+        html: 'Error!',
+        displayLength: 2000,
+        completeCallback: function(){
+          history.back();
+        }
+      });
     return Promise.reject(new Error(response.statusText));
   } else {
     return Promise.resolve(response);
