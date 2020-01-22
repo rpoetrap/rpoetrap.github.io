@@ -20,10 +20,10 @@ var options = {
 };
 
 var pushSubscription = {
-  "endpoint": "https://fcm.googleapis.com/fcm/send/ePPOQgS_FYo:APA91bG94tfZK2ROvAsUNlNFrooilmsGPM3wDvUSEsKIPrAy5Ej427a291v5huGXN3qCfGD279-khxf6zfl_2laiDsAyVwZfcop1fqIaqZst9NL9gS1LleNVlE7Eg1x927qqnRwY1PtM",
+  "endpoint": "https://fcm.googleapis.com/fcm/send/cF0vtibEalo:APA91bEvn6XDjLMuSr-Mcft7dKPaadyPJY1jrTMNg6brVIWhpjOqjK0GqkwwUIE0kw0G6DIzyJbCOEryICGTWRBqlZI530AvfUlY28VBktC4Fz3vaGnuBySwUMmEPClwPG6c7nz6Kx_t",
   "keys": {
-    "p256dh": "BNZtypQeNyOZISlc6r9GhS8rxd4857URpl84RJ_37nt7-u2jj2pdZWAfscgtK8iYKnO3epRykmvsXP9lYiuhKg4",
-    "auth": "P1FSBuqOSyyNZxZ6gxk7vA"
+    "p256dh": "BILYnA9BDhYgbiVshXAG-1zlZktvK5gLGTb-olTXbDKnJQmzflcxExh3o2buKOLieAegrFkcnpKOnziI1cRJWBY",
+    "auth": "21xfhAi6GgR1FgSjqgSVZA"
   }
 };
 

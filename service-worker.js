@@ -85,59 +85,59 @@ if (workbox) {
       ]
     })
   );
+  self.addEventListener("notificationclick", function(event) {
+    event.notification.close();
+  
+    if (!event.action) {
+      console.log("Notification Click.");
+      return;
+    }
+    switch (event.action) {
+      case "yes-action":
+        console.log("Pengguna memilih action yes.");
+        // buka tab baru
+        clients.openWindow("https://google.com");
+        break;
+      case "no-action":
+        console.log("Pengguna memilih action no");
+        break;
+      default:
+        console.log(`Action yang dipilih tidak dikenal: '${event.action}'`);
+        break;
+    }
+  });
+  
+  self.addEventListener("push", function(event) {
+    var body;
+    if (event.data) {
+      body = event.data.text();
+    } else {
+      body = "Push message no payload";
+    }
+    var options = {
+      body: body,
+      icon: "/static/icon-152.png",
+      badge: "/static/icon-152.png",
+      vibrate: [100, 50, 100],
+      data: {
+        dateOfArrival: Date.now(),
+        primaryKey: 1
+      },
+      requireInteraction: true,
+      actions: [
+        {
+          action: "yes-action",
+          title: "Iya"
+        },
+        {
+          action: "no-action",
+          title: "Tidak"
+        }
+      ]
+    };
+    event.waitUntil(
+      self.registration.showNotification("Basic Laboratory", options)
+    );
+  });
 } else console.log(`Workbox gagal dimuat`);
 
-self.addEventListener("notificationclick", function(event) {
-  event.notification.close();
-
-  if (!event.action) {
-    console.log("Notification Click.");
-    return;
-  }
-  switch (event.action) {
-    case "yes-action":
-      console.log("Pengguna memilih action yes.");
-      // buka tab baru
-      clients.openWindow("https://google.com");
-      break;
-    case "no-action":
-      console.log("Pengguna memilih action no");
-      break;
-    default:
-      console.log(`Action yang dipilih tidak dikenal: '${event.action}'`);
-      break;
-  }
-});
-
-self.addEventListener("push", function(event) {
-  var body;
-  if (event.data) {
-    body = event.data.text();
-  } else {
-    body = "Push message no payload";
-  }
-  var options = {
-    body: body,
-    icon: "/static/icon-152.png",
-    badge: "/static/icon-152.png",
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now(),
-      primaryKey: 1
-    },
-    requireInteraction: true,
-    actions: [
-      {
-        action: "yes-action",
-        title: "Iya"
-      },
-      {
-        action: "no-action",
-        title: "Tidak"
-      }
-    ]
-  };
-  event.waitUntil(
-    self.registration.showNotification("Basic Laboratory", options)
-  );
-});
